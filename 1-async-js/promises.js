@@ -34,14 +34,14 @@ function createPost(post) {
 //   .then(getPosts)
 //   .catch(err => console.log(err));
 
-// Async / Await
-// async function init() {
-//   await createPost({ title: "Post Tree", body: "This is post three" });
+// Async / Await;
+async function init() {
+  await createPost({ title: "Post Tree", body: "This is post three" });
 
-//   getPosts();
-// }
+  getPosts();
+}
 
-// init();
+init();
 
 // Async / Await / Fetch
 async function fetchUsers() {
