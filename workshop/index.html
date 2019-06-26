@@ -10,34 +10,43 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="shortcut icon"
+      href="img/favicon/favicon.ico"
+      type="image/x-icon"
+    />
     <title>Glo-Kinopoisk</title>
   </head>
-  <body>
-    <nav class="navbar">
-      <div class="container">
-        <a href="index.html" class="navbar-brand">Glo-Kinopoisk</a>
-      </div>
-    </nav>
 
-    <div class="container">
-      <div class="jumbotron">
-        <h3 class="text-center">Поиск фильмов</h3>
-        <form id="search-form">
+  <body>
+    <nav class="navbar navbar-dark bg-dark justify-content-around mb-5">
+      <div class="container">
+        <a href="./" class="navbar-brand">Glo-Kinopoisk</a>
+        <form id="search-form" class="form-inline">
           <input
-            type="text"
+            type="search"
             id="searchText"
-            class="form-control"
+            class="form-control mr-3"
             placeholder="Ввведите название..."
           />
+          <button
+            class="btn btn-outline-success my-2 my-sm-0 animated infinite pulse slower"
+            type="submit"
+            id="btn"
+          >
+            Найти
+          </button>
         </form>
+        <div class="text-center text-white">Поиск фильмов</div>
       </div>
-    </div>
+    </nav>
 
     <!--Result of search-->
     <div class="container">
       <div id="movies" class="row"></div>
     </div>
 
-    <script src="./script.js"></script>
+    <script src="./js/script-fetch.js"></script>
   </body>
 </html>
