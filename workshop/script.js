@@ -33,7 +33,11 @@ function requestApi(method, url) {
 
     output.results.forEach(item => {
       let nameItem = item.name || item.title;
-      inner += `<div class='col-12'>${nameItem}</div>`;
+      let releaseDate = item.release_date || item.first_air_date;
+      inner += `<div class='col-12'>
+        <h5>${nameItem}</h5>
+        <p>Дата показа: ${releaseDate}</p>
+      </div>`;
     });
 
     movie.innerHTML = inner;
